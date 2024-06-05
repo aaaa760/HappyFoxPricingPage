@@ -1,0 +1,15 @@
+.products
+{
+  background: #ffecec; 
+  font-weight: 500; 
+  border: 1px solid rgb(255 58 58 / 20%); 
+  padding: 11px 26px; 
+  font-size: 15.5px; 
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
+  color: #181c20; 
+  border-bottom: none; 
+  width: 137px; 
+  height:46px; 
+  
+}
