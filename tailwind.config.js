@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         'custom-bg': '#ffecec',
         'custom-border': 'rgb(255 58 58 / 20%)',
+        'custom-gray': '#eee',
       },
     },
   },

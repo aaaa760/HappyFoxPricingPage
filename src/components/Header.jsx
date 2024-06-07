@@ -10,7 +10,7 @@ const Header = () => {
           <HappyFoxLogo className="h-full mr-6" />
          <span className="products flex flex-row">
           <div>Products</div>
-          <img className="mr-2 ml-1 mt-2 mb-2" src="https://assets.www.happyfox.com/v2/images/site-nav/menu-togle-arrow-gray-up.png" class="hf-productnav__menu-arrow" alt="menu togle arrow" width="8" height="8"></img>
+          <img className="mr-2 ml-1 mt-2 mb-2 " src="https://assets.www.happyfox.com/v2/images/site-nav/menu-togle-arrow-gray-up.png"  alt="menu togle arrow" width="8" height="8"></img>
           </span >
         </div>
         <p className="text-sm text-gray-600 hover:text-black cursor-pointer">
