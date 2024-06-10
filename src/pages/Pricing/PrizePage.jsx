@@ -1,5 +1,6 @@
 import React from 'react';
 import PricingCard from '../../components/PricingCard';
+import '../../components/index.css'
 const PricingPage = () => {
   const pricingOptions = [
     {
@@ -37,7 +38,7 @@ const PricingPage = () => {
         '24/7 Email/Chat Support',
         'Uptime SLA',
       ],
-      isPopular: true,
+      
     },
     {
       title: 'Enterprise Plus',
@@ -54,6 +55,7 @@ const PricingPage = () => {
   ];
 
   return (
+    <>
     <div className="container mx-auto w-4/5  p-6 mt-4 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4">
        {pricingOptions.map((option, index) => (
         <div
@@ -68,6 +70,13 @@ const PricingPage = () => {
         </div>
       ))}
     </div>
+    <div className="mt-12 mb-24 mx-auto pricing-para py-3 px-4 text-center font-light text-md rounded-lg max-w-xl text-black">
+    All plans require a minimum of 5 help desk agents. Non-profit and
+    educational organizations are eligible for a discount.
+  </div>
+  
+  </>
+    
   );
 };
 

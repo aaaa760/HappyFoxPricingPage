@@ -113,3 +113,66 @@
   background: #ff3a3a;
   color: #fff;
 }
+
+.design {
+  width: 100%;
+  text-align: left;
+  padding-left: 0;
+  font-size: 14px;
+  color: #555550;
+  margin-bottom: 15px;
+  list-style: circle;
+  margin-left: 8px;
+}
+
+.pricing-para{
+  background: #f9f9f9;
+}
+
+.plan-title {
+  color:#323643
+}
+
+.pricing-para-link {
+  color:#323643;
+  border-bottom: 0.5px dotted #323643;
+}
+
+
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: medium;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 16px;
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
