@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './index.css';
-import { ReactComponent as DownArrow} from '../assets/svg/DownArrow.svg';
-import {ReactComponent as UpArrow} from '../assets/svg/UpArrow.svg'
+import React, { useState } from "react";
+import "./index.css";
+import { ReactComponent as DownArrow } from "../assets/svg/DownArrow.svg";
+import { ReactComponent as UpArrow } from "../assets/svg/UpArrow.svg";
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,9 +16,8 @@ const FAQItem = ({ question, answer }) => {
         {isOpen ? (
           <UpArrow className="h-3 w-2" />
         ) : (
-          <DownArrow className='h-3 w-2' />
+          <DownArrow className="h-3 w-2" />
         )}
-        
       </button>
       {isOpen && (
         <div className="py-2">
@@ -35,16 +34,26 @@ const ProductTag = ({ image, title, description, link, linkText }) => (
     <h4 className="text-xl font-semibold mb-2">{title}</h4>
     <p className="text-gray-600 mb-4">{description}</p>
     <a href={link} className="text-black font-md flex items-center">
-      {linkText} <img src="https://assets.www.happyfox.com/v2/images/right-arrow-small.svg" alt="icon" className="ml-1" />
+      {linkText}{" "}
+      <img
+        src="https://assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+        alt="icon"
+        className="ml-1"
+      />
     </a>
   </div>
 );
 
 const FAQSection = () => (
-  <div className="bg-white flex flex-col ">
-    <div className="container mx-auto w-4/5 bg-white border  rounded-xl shadow-lg p-12 px-20 mt-24 ">
-      <div className="">
-        <h2 className="text-4xl text-gray-700 font-semibold text-center mb-16 mt-6">Frequently Asked Questions</h2>
+  <>
+  <div className="h-96 bg-gray-100 w-full mt-12">
+
+  </div>
+    <div className="container mx-auto w-4/5 bg-white border  rounded-xl shadow-lg p-12 px-20 -mt-80 ">
+      <div className="bg-white flex flex-col">
+        <h2 className="text-4xl text-gray-700 font-semibold text-center mb-16 mt-6">
+          Frequently Asked Questions
+        </h2>
         <div className="">
           <FAQItem
             question="Who are help desk agents?"
@@ -67,16 +76,18 @@ const FAQSection = () => (
             answer="We offer a 10% discount on annual subscriptions on any plan."
           />
           <FAQItem
-          question="What are the available bill cycles"
-          answer="We offer a monthly, annual, 2-year savings plan (paid upfront), and 3-year contract for agent-based pricing."
+            question="What are the available bill cycles"
+            answer="We offer a monthly, annual, 2-year savings plan (paid upfront), and 3-year contract for agent-based pricing."
           />
         </div>
       </div>
     </div>
 
-    <div className="container mx-auto w-4/5  mt-36 ">
-      <h2 className="text-4xl font-semibold text-center mb-20">More from HappyFox</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 ">
+    <div className="container mx-auto w-3/4  mt-36">
+      <h2 className="text-4xl font-semibold text-center mb-20">
+        More from HappyFox
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-20 ">
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Live Chat"
@@ -114,7 +125,7 @@ const FAQSection = () => (
         />
       </div>
     </div>
-  </div>
+  </>
 );
 
 export default FAQSection;

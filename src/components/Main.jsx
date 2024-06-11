@@ -29,14 +29,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="mt-5 p-5 w-full h-36">
-        <div className="buttons-bar">
-            <button className="button-price-selected">Monthly</button>
-            <button className="button-price">Annual</button>
-            <button className="button-price">2-Year Savings Plan <br/><p className="text-sm ">Paid Up Front</p></button>
-            <button className="button-price">3-Year Contract<br/><p className="text-sm ">Billed Annually</p></button>
-        </div>
-      </div>
+    
 
     </>
   );
