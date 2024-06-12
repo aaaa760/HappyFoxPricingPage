@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Main = ({ togglePricingPage }) => {
+  const [selectedPage, setSelectedPage] = useState("pricing");
+
+  const handleButtonClick = (page) => {
+    setSelectedPage(page);
+    togglePricingPage(page);
+  };
+
+  const getButtonClass = (page) => {
+    return selectedPage === page
+      ? "bg-white text-black"
+      : "unlimited text-gray-800 hover:bg-white";
+  };
+
   return (
     <>
       <div
@@ -14,16 +27,20 @@ const Main = ({ togglePricingPage }) => {
         <h1 className="py-2 my-16 text-4xl font-medium">Plans & Pricing</h1>
         <div className="flex flex-row items-start justify-between mx-auto">
           <button
-            onClick={() => togglePricingPage("pricing")}
-            className="p-4 py-9 w-80  text-center text-black bg-white shadow-none rounded-t-xl border-none mt-4 mr-3 ml-auto hover:bg-white cursor-pointer"
+            onClick={() => handleButtonClick("pricing")}
+            className={`p-4 py-9 w-80 text-center shadow-none rounded-t-xl border-none mt-4 mr-3 ml-auto cursor-pointer ${getButtonClass(
+              "pricing"
+            )}`}
           >
             <h4 className="font-medium">Agent-based pricing</h4>
           </button>
           <button
-            onClick={() => togglePricingPage("unlimited")}
-            className="unlimited p-4 py-9 w-80 mr-auto rounded-t-xl border-none text-center cursor-pointer  mt-4 ml-3 hover:bg-white "
+            onClick={() => handleButtonClick("unlimited")}
+            className={`p-4 py-9 w-80 rounded-t-xl border-none text-center cursor-pointer mt-4 ml-3 ${getButtonClass(
+              "unlimited"
+            )}`}
           >
-            <h4 className="font-medium text-gray-800">Unlimited Agents</h4>
+            <h4 className="font-medium">Unlimited Agents</h4>
           </button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React , {useEffect} from "react";
 
 const NavBar = () => {
   useEffect(() => {
@@ -56,7 +56,7 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+    )
+}
 
 export default NavBar;

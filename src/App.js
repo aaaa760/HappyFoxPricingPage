@@ -9,7 +9,6 @@ import FAQSection from "./components/FAQSection.jsx";
 
 function App() {
   const [showPricingPage, setShowPricingPage] = useState("pricing");
-
   const togglePricingPage = (page) => {
     setShowPricingPage(page);
   };
@@ -26,5 +25,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

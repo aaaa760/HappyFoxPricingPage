@@ -109,22 +109,25 @@ const PricingComparisonTable = () => {
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Mighty && (
-                        <span className="text-green-600">&#10003;</span>
+                         <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Fantastic && (
-                        <span className="text-green-600">&#10003;</span>
+                       
+                        <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Enterprise && (
-                        <span className="text-green-600">&#10003;</span>
+                       <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability["Enterprise Plus"] && (
-                        <span className="text-green-600">&#10003;</span>
+                         <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
                       )}
                     </td>
                   </tr>
