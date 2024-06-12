@@ -18,6 +18,7 @@ const PricingPage = () => {
           'SSL Certificate Hosting',
           'Migration Assistance',
         ],
+        savings: '',
       },
       {
         title: 'Fantastic',
@@ -30,6 +31,7 @@ const PricingPage = () => {
           '24/7 Email Support',
           'Optional EU Data Center',
         ],
+        savings: '',
       },
       {
         title: 'Enterprise',
@@ -42,6 +44,8 @@ const PricingPage = () => {
           '24/7 Email/Chat Support',
           'Uptime SLA',
         ],
+        isPopular: true,
+        savings: '',
       },
       {
         title: 'Enterprise Plus',
@@ -54,12 +58,13 @@ const PricingPage = () => {
           '24/7 Email/Chat/Phone Support',
           'Customer Success Manager',
         ],
+        savings: '',
       },
     ],
     Annual: [
       {
         title: 'Mighty',
-        price: 35,
+        price: 29,
         features: [
           'Omnichannel Ticket Creation',
           'SLA Management',
@@ -68,10 +73,11 @@ const PricingPage = () => {
           'SSL Certificate Hosting',
           'Migration Assistance',
         ],
+        savings: '25% Savings*',
       },
       {
         title: 'Fantastic',
-        price: 53,
+        price: 49,
         features: [
           'Everything in Mighty',
           'Multi-brand Helpdesk',
@@ -80,10 +86,11 @@ const PricingPage = () => {
           '24/7 Email Support',
           'Optional EU Data Center',
         ],
+        savings: '16% Savings*',
       },
       {
         title: 'Enterprise',
-        price: 71,
+        price: 69,
         features: [
           'Everything in Fantastic',
           'Proactive Agent Collision',
@@ -92,6 +99,8 @@ const PricingPage = () => {
           '24/7 Email/Chat Support',
           'Uptime SLA',
         ],
+        isPopular: true,
+        savings: '12% Savings*',
       },
       {
         title: 'Enterprise Plus',
@@ -104,12 +113,13 @@ const PricingPage = () => {
           '24/7 Email/Chat/Phone Support',
           'Customer Success Manager',
         ],
+        savings: '10% Savings*',
       },
     ],
     '2-Year': [
       {
         title: 'Mighty',
-        price: 33,
+        price: 26,
         features: [
           'Omnichannel Ticket Creation',
           'SLA Management',
@@ -118,10 +128,11 @@ const PricingPage = () => {
           'SSL Certificate Hosting',
           'Migration Assistance',
         ],
+        savings: '33% Savings*',
       },
       {
         title: 'Fantastic',
-        price: 50,
+        price: 39,
         features: [
           'Everything in Mighty',
           'Multi-brand Helpdesk',
@@ -130,10 +141,11 @@ const PricingPage = () => {
           '24/7 Email Support',
           'Optional EU Data Center',
         ],
+        savings: '34% Savings*',
       },
       {
         title: 'Enterprise',
-        price: 67,
+        price: 52,
         features: [
           'Everything in Fantastic',
           'Proactive Agent Collision',
@@ -142,10 +154,12 @@ const PricingPage = () => {
           '24/7 Email/Chat Support',
           'Uptime SLA',
         ],
+        isPopular: true,
+        savings: '34% Savings*',
       },
       {
         title: 'Enterprise Plus',
-        price: 85,
+        price: 64,
         features: [
           'Everything in Enterprise',
           'Agent Scripting',
@@ -154,12 +168,13 @@ const PricingPage = () => {
           '24/7 Email/Chat/Phone Support',
           'Customer Success Manager',
         ],
+        savings: '35% Savings*',
       },
     ],
     '3-Year': [
       {
         title: 'Mighty',
-        price: 30,
+        price: 27,
         features: [
           'Omnichannel Ticket Creation',
           'SLA Management',
@@ -168,10 +183,11 @@ const PricingPage = () => {
           'SSL Certificate Hosting',
           'Migration Assistance',
         ],
+        savings: '30% Savings*',
       },
       {
         title: 'Fantastic',
-        price: 45,
+        price: 41,
         features: [
           'Everything in Mighty',
           'Multi-brand Helpdesk',
@@ -180,10 +196,11 @@ const PricingPage = () => {
           '24/7 Email Support',
           'Optional EU Data Center',
         ],
+        savings: '30% Savings*',
       },
       {
         title: 'Enterprise',
-        price: 60,
+        price: 55,
         features: [
           'Everything in Fantastic',
           'Proactive Agent Collision',
@@ -192,10 +209,12 @@ const PricingPage = () => {
           '24/7 Email/Chat Support',
           'Uptime SLA',
         ],
+        isPopular: true,
+        savings: '30% Savings*',
       },
       {
         title: 'Enterprise Plus',
-        price: 80,
+        price: 69,
         features: [
           'Everything in Enterprise',
           'Agent Scripting',
@@ -204,10 +223,11 @@ const PricingPage = () => {
           '24/7 Email/Chat/Phone Support',
           'Customer Success Manager',
         ],
+        savings: '30% Savings*',
       },
     ],
   };
-
+  
   return (
     <>
       <div className="mt-5 p-5 w-full h-36">

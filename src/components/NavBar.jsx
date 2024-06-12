@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const NavBar = () =>{
-    return(
-    <nav id="secondDiv" className="w-full bg-custom-bg border-t border-custom-border">
+const NavBar = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.getElementById("secondDiv");
+      if (window.scrollY > 0) {
+        nav.classList.add("sticky", "top-0", );
+      } else {
+        nav.classList.remove("sticky", "top-0", );
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav id="secondDiv" className="w-full bg-custom-bg border-t border-custom-border z-50">
       <div className="nav-bar w-[1140px] h-[60px] mx-auto px-4 flex justify-between items-center">
         <div className="w-[18%] h-[60px] flex items-center">
-        
           <a href="/" className="flex items-center text-[25px] ml-3 cursor-pointer">
             <img
               id="hfNavbarlogo"
@@ -41,7 +56,7 @@ const NavBar = () =>{
         </div>
       </div>
     </nav>
-    )
-}
+  );
+};
 
 export default NavBar;

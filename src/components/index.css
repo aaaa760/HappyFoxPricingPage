@@ -68,6 +68,12 @@
   background: #f5f4f4; width: 1140px; margin: 0 auto 100px; padding: 10px; display: flex; border-radius: 10px;
 }
 
+.buttons-bar-unlimited
+{
+  background: #f5f4f4; width: 1140px; margin: 0 auto 100px; padding: 10px; display: flex; justify-content:space-around; border-radius: 10px;
+
+}
+
 .button-price-selected {
   background: #fff;
   border: 1px solid #c8c7c7;
@@ -164,4 +170,13 @@
   max-height: 0;
   opacity: 0;
   transition: max-height 300ms ease-in, opacity 300ms ease-in;
+}
+
+
+thead th {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 61px; 
+  background-color: white; 
+
 }
