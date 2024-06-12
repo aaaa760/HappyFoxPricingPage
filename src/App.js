@@ -8,7 +8,7 @@ import PricingComparisonTable from "./components/PricingComparisionTable.jsx";
 import FAQSection from "./components/FAQSection.jsx";
 
 function App() {
-  const [showPricingPage, setShowPricingPage] = useState(null);
+  const [showPricingPage, setShowPricingPage] = useState("pricing");
 
   const togglePricingPage = (page) => {
     setShowPricingPage(page);
