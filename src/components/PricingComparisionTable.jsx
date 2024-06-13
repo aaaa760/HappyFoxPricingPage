@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 
 const features = [
   {
@@ -37,7 +36,6 @@ const features = [
       "Enterprise Plus": true,
     },
   },
-  // Add more categories and features as needed
   {
     category: "Reporting",
     items: ["Basic Reports", "Advanced Reports", "Scheduled Reports"],
@@ -59,7 +57,6 @@ const features = [
     },
   },
 ];
-
 const PricingComparisonTable = () => {
   return (
     <>
@@ -109,25 +106,24 @@ const PricingComparisonTable = () => {
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Mighty && (
-                         <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+                         <img alt ="tick" src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
 
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Fantastic && (
-                       
-                        <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+                        <img alt="tick" src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
 
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability.Enterprise && (
-                       <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+                       <img alt="tick" src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {feature.availability["Enterprise Plus"] && (
-                         <img src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
+                         <img alt="tick" src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"  className="pl-12"></img>
                       )}
                     </td>
                   </tr>
