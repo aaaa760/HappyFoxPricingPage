@@ -7,7 +7,7 @@ const Header = () => {
     <header className="bg-white pt-2.5 w-full">
       <div
         className="container mx-auto w-4/5 px-4 flex justify-between items-center h-12"
-        style={{ maxWidth: '1110px' }}
+        
       >
         <div className="flex items-center">
           <HappyFoxLogo className="h-full mr-6" />

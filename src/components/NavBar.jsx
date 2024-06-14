@@ -39,7 +39,7 @@ const NavBar = () => {
               height="30"
               className="hf-productnav__logo w-[30px] h-[30px]"
             />
-            <span className="helpdesk pl-3 text-[18px]">helpdesk</span>
+            <span className="ml-3 text-[25px] font-normal text-black">helpdesk</span>
           </a>
         </div>
         <div className="hidden lg:flex flex-row justify-end items-center lg:ml-52  ">
