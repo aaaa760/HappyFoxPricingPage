@@ -21,14 +21,13 @@ const Main = ({ togglePricingPage }) => {
         style={{
           backgroundImage:
             "url(https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png)",
-          
         }}
       >
-        <h1 className="py-2 my-10 md:my-[59px] lg:my-16 text-4xl font-medium">Plans & Pricing</h1>
+        <h1 className="py-10 sm:py-0 sm:my-[46px] md:my-[65px] lg:mt-20 lg:mb-[76px] text-[40px] font-medium ">Plans & Pricing</h1>
         <div className="flex flex-row items-start justify-between mx-auto">
           <button
             onClick={() => handleButtonClick("pricing")}
-            className={`p-4 py-2 sm:py-6 md:py-8 lg:py-9 w-[200px] sm:w-60 md:w-72 lg:w-80 h-[70px] sm:h-[70px] md:h-[90px] lg:h-[100px] text-center shadow-none rounded-t-xl border-none mt-4 mr-3 ml-auto cursor-pointer ${getButtonClass(
+            className={`p-4 py-4 w-[136px] h-[82px]  sm:py-6 md:py-8 lg:py-9  sm:w-60 md:w-72 lg:w-80  sm:h-[70px] md:h-[90px] lg:h-[85px] text-center shadow-none rounded-t-xl border-none  mr-3 sm:ml-auto cursor-pointer ${getButtonClass(
               "pricing"
             )}`}
           >
@@ -36,7 +35,7 @@ const Main = ({ togglePricingPage }) => {
           </button>
           <button
             onClick={() => handleButtonClick("unlimited")}
-            className={`p-4 py-2 sm:py-6 md:py-8 lg:py-9 w-[200px] sm:w-68 md:w-72 lg:w-80 h-[70px] sm:h-[70px] md:h-[90px] lg:h-[100px] text-center shadow-none rounded-t-xl border-none mt-4 mr-3 ml-auto cursor-pointer ${getButtonClass(
+            className={`p-4 py-4 w-[136px] h-[82px] sm:py-6 md:py-8 lg:py-9  sm:w-60 md:w-72 lg:w-80  sm:h-[70px] md:h-[90px] lg:h-[85px] text-center shadow-none rounded-t-xl border-none sm:mr-3 sm:ml-auto cursor-pointer ${getButtonClass(
               "unlimited"
             )}`}
           >

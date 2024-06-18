@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import { ReactComponent as DownArrow } from "../assets/svg/DownArrow.svg";
 import { ReactComponent as UpArrow } from "../assets/svg/UpArrow.svg";
+
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,14 +20,14 @@ const FAQItem = ({ question, answer }) => {
           <DownArrow className="h-3 w-2" />
         )}
       </button>
-      {isOpen && (
-        <div className="py-2">
-          <p className="text-gray-700 pl-4 pb-4">{answer}</p>
-        </div>
-      )}
+      <div className={`answer ${isOpen ? "open" : ""}`}>
+        <p className="text-gray-700 pl-4 pb-4">{answer}</p>
+      </div>
     </div>
   );
 };
+
+
 
 const ProductTag = ({ image, title, description, link, linkText }) => (
   <div className="flex flex-col items-center text-center p-8 py-8 border border-white  rounded-xl  hover:border hover:border-gray-300 hover:shadow-md">
@@ -46,15 +47,15 @@ const ProductTag = ({ image, title, description, link, linkText }) => (
 
 const FAQSection = () => (
   <>
-  <div className="h-96 bg-gray-100 w-full mt-12">
+  <div className="h-[475px] bg-gray-100 w-full mt-12">
 
   </div>
-    <div className="container mx-auto w-4/5 bg-white border  rounded-xl shadow-lg p-12 px-20 -mt-80 ">
+    <div className="container mx-auto w-11/12 sm:w-4/5 bg-white border  rounded-xl shadow-lg p-6 sm:p-12 sm:px-20 -mt-[414px] ">
       <div className="bg-white flex flex-col">
         <h2 className="text-4xl text-gray-700 font-semibold text-center mb-16 mt-6">
           Frequently Asked Questions
         </h2>
-        <div className="">
+        <div>
           <FAQItem
             question="Who are help desk agents?"
             answer="Support agents (help desk staff) who will be actively managing and responding to tickets raised by contacts."
@@ -87,7 +88,7 @@ const FAQSection = () => (
       <h2 className="text-4xl font-semibold text-center mb-20">
         More from HappyFox
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-20 ">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 mb-20 ">
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Live Chat"
@@ -98,28 +99,28 @@ const FAQSection = () => (
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Chatbot"
-          description="Chat with your customers instantly on mobile, desktop, and web."
+          description="Engage and reach your customers 24x7 with ready-to-go chatbots."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Assist AI"
-          description="Chat with your customers instantly on mobile, desktop, and web."
+          description="Provide IT support directly from Slack and Microsoft Teams."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Business Intelligence"
-          description="Chat with your customers instantly on mobile, desktop, and web."
+          description="Turn insight into advantage with cross-functional reports & dashboards."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Workflow Automation"
-          description="Reduce the grunt work with end to end process automation"
+          description="Reduce the grunt work with end-to-end process automation."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />

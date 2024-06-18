@@ -22,7 +22,7 @@ const NavBar = () => {
       id="secondDiv"
       className="w-full bg-custom-bg border-t border-custom-border z-50"
     >
-      <div className="w-4/5 h-[60px] mx-auto px-4 flex items-center justify-between ">
+      <div className="w-10/12 sm:w-4/5 h-[60px] mx-auto px-4 flex items-center justify-between ">
         <div className="flex items-center">
           <button className="lg:hidden focus:outline-none">
             <HamBurger className="w-4 h-4" />
@@ -37,9 +37,9 @@ const NavBar = () => {
               alt="happyfox logo"
               width="30"
               height="30"
-              className="hf-productnav__logo w-[30px] h-[30px]"
+              className="hf-productnav__logo  w-[20px] h-[20px] sm:w-[30px] sm:h-[30px]"
             />
-            <span className="ml-3 text-[25px] font-normal text-black">helpdesk</span>
+            <span className="ml-1 sm:ml-3  text-[18px] sm:text-[25px] font-sans text-black ">helpdesk</span>
           </a>
         </div>
         <div className="hidden lg:flex flex-row justify-end items-center lg:ml-52  ">

@@ -17,11 +17,11 @@
   background: #fff;
   border: 1px solid #c8c7c7;
   padding: 13.5px 10px;
+  height: 71px;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   font-weight: 500;
- 
 }
 
 .button-price:active {
@@ -45,12 +45,14 @@
   font-size: 16px;
   cursor: pointer;
   font-weight: 300;
+  height: 71px;
 }
 
 .button-price:hover {
   background: #fff;
   border: 1px solid #c8c7c7;
   padding: 13.5px 10px;
+  height: 71px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
@@ -183,3 +185,15 @@ thead th {
   background-color: white; 
 
 }
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+}
+
+.answer.open {
+  max-height: 200px; /* You may adjust this value based on your content */
+  padding: 10px 0;
+}
+

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-white pt-2.5 w-full">
       <div
-        className="container mx-auto w-4/5 px-4 flex justify-between items-center h-12"
+        className="container mx-auto w-10/12 sm:w-4/5 px-4 flex justify-between items-center h-12"
         
       >
         <div className="flex items-center">

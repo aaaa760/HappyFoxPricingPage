@@ -140,22 +140,28 @@ const PricingPageUnlimited = () => {
   
   return (
     <>
-      <div className="mt-5 p-5 w-full h-36">
-        <div className="buttons-bar-unlimited">
+      <div className="mt-5 p-5 w-full  h-[380px] lg:h-32">
+        <div className="buttons-bar bg-gray-200 w-full md:w-4/5 mx-auto mb-10 p-2 flex flex-col items-center justify-around lg:flex-row md:space-x-4 space-y-4 md:space-y-0 rounded-lg">
         <button
-            className={`button-price ${selectedPlan === 'Annual' ? 'button-price-selected' : ''}`}
-            onClick={() => setSelectedPlan('Annual')}
-          >
-            Annual
-          </button>
+          className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+            selectedPlan === "Annual" ? "button-price-selected bg-white border-gray-400" : ""
+          }`}
+          onClick={() => setSelectedPlan("Annual")}
+        >
+          Annual
+        </button>
           <button
-            className={`button-price ${selectedPlan === '2-Year' ? 'button-price-selected' : ''}`}
+           className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+            selectedPlan === "2-Year" ? "button-price-selected bg-white border-gray-400" : ""
+          }`}
             onClick={() => setSelectedPlan('2-Year')}
           >
             2-Year Savings Plan <br/><p className="text-sm">Paid Up Front</p>
           </button>
           <button
-            className={`button-price ${selectedPlan === '3-Year' ? 'button-price-selected' : ''}`}
+            className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+              selectedPlan === "3-Year" ? "button-price-selected bg-white border-gray-400" : ""
+            }`}
             onClick={() => setSelectedPlan('3-Year')}
           >
             3-Year Contract<br/><p className="text-sm">Billed Annually</p>
@@ -167,7 +173,7 @@ const PricingPageUnlimited = () => {
           <div
             key={index}
             className={`${
-              index !== pricingOptions[selectedPlan].length - 1
+              index !== pricingOptions[selectedPlan].length - 1 
                 ? 'border-r border-custom-gray'
                 : ''
             }`}

@@ -231,9 +231,9 @@ const PricingPage = () => {
   return (
     <>
       <div className="mt-5 p-5 w-full  h-[380px] lg:h-32">
-      <div className="buttons-bar bg-gray-200 w-full md:w-4/5 mx-auto mb-10 p-2 flex flex-col items-center justify-center lg:flex-row md:space-x-4 space-y-4 md:space-y-0 rounded-lg">
+      <div className="buttons-bar bg-gray-200 w-full md:w-4/5 mx-auto mb-10 p-2 flex flex-col items-center justify-around lg:flex-row md:space-x-4 space-y-4 md:space-y-0 rounded-lg">
         <button
-          className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+          className={`button-price w-full lg:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
             selectedPlan === "Monthly" ? "button-price-selected bg-white border-gray-400" : ""
           }`}
           onClick={() => setSelectedPlan("Monthly")}
@@ -241,7 +241,7 @@ const PricingPage = () => {
           Monthly
         </button>
         <button
-          className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+          className={`button-price w-full lg:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
             selectedPlan === "Annual" ? "button-price-selected bg-white border-gray-400" : ""
           }`}
           onClick={() => setSelectedPlan("Annual")}
@@ -250,7 +250,7 @@ const PricingPage = () => {
          
         </button>
         <button
-          className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+          className={`button-price w-full lg:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
             selectedPlan === "2-Year" ? "button-price-selected bg-white border-gray-400" : ""
           }`}
           onClick={() => setSelectedPlan("2-Year")}
@@ -259,7 +259,7 @@ const PricingPage = () => {
           <p className="text-sm">Paid Up Front</p>
         </button>
         <button
-          className={`button-price w-full md:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
+          className={`button-price w-full lg:w-1/4 p-3.5 rounded-lg text-lg font-medium cursor-pointer ${
             selectedPlan === "3-Year" ? "button-price-selected bg-white border-gray-400" : ""
           }`}
           onClick={() => setSelectedPlan("3-Year")}
@@ -269,13 +269,13 @@ const PricingPage = () => {
         </button>
       </div>
     </div>
-      <div className="container mx-auto w-4/5 p-6 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto sm:w-4/5 p-6 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {pricingOptions[selectedPlan].map((option, index) => (
           <div
             key={index}
             className={`${
               index !== pricingOptions[selectedPlan].length - 1
-                ? "border-r border-custom-gray"
+                ? "border-t sm:border-r  border-custom-gray"
                 : ""
             }`}
           >

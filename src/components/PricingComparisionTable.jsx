@@ -1,5 +1,5 @@
 import React from "react";
-import './index.css';
+import "./index.css";
 
 const features = [
   {
@@ -69,7 +69,7 @@ const PricingComparisonTable = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="hidden md:block">
+        <div className="hidden sm:block">
           <table className="mx-auto w-4/5 text-left border-collapse mt-12">
             <thead>
               <tr className="text-xl font-medium w-full text-right plan-title">
@@ -77,14 +77,19 @@ const PricingComparisonTable = () => {
                 <th className="p-4 border-b-2 border-gray-200">Mighty</th>
                 <th className="p-4 border-b-2 border-gray-200">Fantastic</th>
                 <th className="p-4 border-b-2 border-gray-200">Enterprise</th>
-                <th className="p-4 border-b-2 border-gray-200">Enterprise Plus</th>
+                <th className="p-4 border-b-2 border-gray-200">
+                  Enterprise Plus
+                </th>
               </tr>
             </thead>
             <tbody>
               {features.map((feature, featureIndex) => (
                 <React.Fragment key={featureIndex}>
                   <tr>
-                    <td colSpan="5" className="bg-white p-4 font-bold text-base">
+                    <td
+                      colSpan="5"
+                      className="bg-white p-4 font-bold text-base"
+                    >
                       {feature.category}
                     </td>
                   </tr>
@@ -148,85 +153,83 @@ const PricingComparisonTable = () => {
             </tbody>
           </table>
         </div>
-        <div className="block md:hidden">
-          <table className="mx-auto w-9/10 text-left mt-12">
-            <thead>
-              <tr className="w-full text-left plan-title">
-                <th className="px-4 plan-title">Mighty</th>
-                <th className="px-4 plan-title">Fantastic</th>
-              </tr>
-              <tr className="text-xl font-medium w-full text-left plan-title">
-                <th className="px-4 py-2 plan-title">Enterprise</th>
-                <th className="px-4 py-2 plan-title">Enterprise Plus</th>
-              </tr>
-            </thead>
-            <tbody>
-              {features.map((feature, featureIndex) => (
-                <React.Fragment key={featureIndex}>
-                  <tr>
-                    <td colSpan="4" className="bg-white p-4 font-bold text-base">
-                      {feature.category}
-                    </td>
-                  </tr>
-                  {feature.items.map((item, itemIndex) => (
-                    <React.Fragment key={itemIndex}>
-                      <tr className="flex flex-col bg-white hover:bg-gray-100">
-                        <td className="p-4 text-gray-900">
-                          <a
-                            href="/"
-                            className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
-                          >
-                            {item}
-                          </a>
-                        </td>
-                      </tr>
-                      <tr className="flex justify-around bg-white hover:bg-gray-100">
-                        <div className="p-4 text-center">
-                          {feature.availability.Mighty && (
-                            <img
-                              alt="tick"
-                              src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                              className="pl-12"
-                            ></img>
-                          )}
-                        </div>
-                        <div className="p-4 text-center">
-                          {feature.availability.Fantastic && (
-                            <img
-                              alt="tick"
-                              src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                              className="pl-12"
-                            ></img>
-                          )}
-                        </div>
-                      </tr>
-                      <tr className="flex justify-around bg-white hover:bg-gray-100">
-                        <div className="p-4 text-center">
-                          {feature.availability.Enterprise && (
-                            <img
-                              alt="tick"
-                              src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                              className="pl-12"
-                            ></img>
-                          )}
-                        </div>
-                        <div className="p-4 text-center">
-                          {feature.availability["Enterprise Plus"] && (
-                            <img
-                              alt="tick"
-                              src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                              className="pl-12"
-                            ></img>
-                          )}
-                        </div>
-                      </tr>
-                    </React.Fragment>
-                  ))}
-                </React.Fragment>
-              ))}
-            </tbody>
-          </table>
-        </div>
+      </div>
+      <div className="container mx-auto">
+      <div className="block md:hidden">
+        <table className="mx-auto w-9/10 text-left mt-12">
+          <thead>
+            <tr className="w-full text-left plan-title">
+              <th className="px-4 py-2 plan-title">Mighty</th>
+              <th className="px-4 py-2 plan-title">Fantastic</th>
+            </tr>
+            <tr className="text-xl font-medium w-full text-left plan-title">
+              <th className="px-4 py-2 plan-title">Enterprise</th>
+              <th className="px-4 py-2 plan-title">Enterprise Plus</th>
+            </tr>
+          </thead>
+          <tbody>
+            {features.map((feature, featureIndex) => (
+              <React.Fragment key={featureIndex}>
+                <tr>
+                  <td colSpan="2" className="bg-white p-4 font-bold text-base">
+                    {feature.category}
+                  </td>
+                </tr>
+                {feature.items.map((item, itemIndex) => (
+                  <React.Fragment key={itemIndex}>
+                    <tr className="bg-white hover:bg-gray-100">
+                      <td colSpan="2" className="p-4 text-gray-900">
+                        <a
+                          href="/"
+                          className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
+                        >
+                          {item}
+                        </a>
+                      </td>
+                    </tr>
+                    <tr className="bg-white hover:bg-gray-100">
+                      <td className="px-4 pt-2 text-center">
+                        {feature.availability.Mighty && (
+                          <img
+                            alt="tick"
+                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                          ></img>
+                        )}
+                      </td>
+                      <td className="px-4 pt-2 text-center">
+                        {feature.availability.Fantastic && (
+                          <img
+                            alt="tick"
+                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                          ></img>
+                        )}
+                      </td>
+                    </tr>
+                    <tr className="bg-white hover:bg-gray-100">
+                      <td className="px-4 text-center">
+                        {feature.availability.Enterprise && (
+                          <img
+                            alt="tick"
+                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                          ></img>
+                        )}
+                      </td>
+                      <td className="px-4 text-center">
+                        {feature.availability["Enterprise Plus"] && (
+                          <img
+                            alt="tick"
+                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                          ></img>
+                        )}
+                      </td>
+                    </tr>
+                  </React.Fragment>
+                ))}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
       </div>
     </>
   );
