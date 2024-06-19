@@ -62,7 +62,7 @@ const features = [
 const PricingComparisonTable = () => {
   return (
     <>
-      <div className="border-t bg-gray-100 h-28">
+      <div className="border-t helpdesk-color h-28">
         <h2 className="text-center text-2xl font-md my-10">
           Compare Help Desk Plans
         </h2>
@@ -100,7 +100,7 @@ const PricingComparisonTable = () => {
                         itemIndex % 2 === 0
                           ? "bg-white hover:bg-gray-100"
                           : "bg-gray-50"
-                      } flex flex-col md:table-row`}
+                      } flex flex-col sm:table-row`}
                     >
                       <td className="p-4 text-gray-900">
                         <a
@@ -155,82 +155,87 @@ const PricingComparisonTable = () => {
         </div>
       </div>
       <div className="container mx-auto">
-      <div className="block md:hidden">
-        <table className="mx-auto w-9/10 text-left mt-12">
-          <thead>
-            <tr className="w-full text-left plan-title">
-              <th className="px-4 py-2 plan-title">Mighty</th>
-              <th className="px-4 py-2 plan-title">Fantastic</th>
-            </tr>
-            <tr className="text-xl font-medium w-full text-left plan-title">
-              <th className="px-4 py-2 plan-title">Enterprise</th>
-              <th className="px-4 py-2 plan-title">Enterprise Plus</th>
-            </tr>
-          </thead>
-          <tbody>
-            {features.map((feature, featureIndex) => (
-              <React.Fragment key={featureIndex}>
-                <tr>
-                  <td colSpan="2" className="bg-white p-4 font-bold text-base">
-                    {feature.category}
-                  </td>
-                </tr>
-                {feature.items.map((item, itemIndex) => (
-                  <React.Fragment key={itemIndex}>
-                    <tr className="bg-white hover:bg-gray-100">
-                      <td colSpan="2" className="p-4 text-gray-900">
-                        <a
-                          href="/"
-                          className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
-                        >
-                          {item}
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="bg-white hover:bg-gray-100">
-                      <td className="px-4 pt-2 text-center">
-                        {feature.availability.Mighty && (
-                          <img
-                            alt="tick"
-                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                          ></img>
-                        )}
-                      </td>
-                      <td className="px-4 pt-2 text-center">
-                        {feature.availability.Fantastic && (
-                          <img
-                            alt="tick"
-                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                          ></img>
-                        )}
-                      </td>
-                    </tr>
-                    <tr className="bg-white hover:bg-gray-100">
-                      <td className="px-4 text-center">
-                        {feature.availability.Enterprise && (
-                          <img
-                            alt="tick"
-                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                          ></img>
-                        )}
-                      </td>
-                      <td className="px-4 text-center">
-                        {feature.availability["Enterprise Plus"] && (
-                          <img
-                            alt="tick"
-                            src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
-                          ></img>
-                        )}
-                      </td>
-                    </tr>
-                  </React.Fragment>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
+  <div className="block md:hidden mt-12">
+    
+    <div className="w-full mx-auto grid grid-cols-2 text-left plan-title sticky-header shadow-lg ">
+      <div className="px-4 py-2">Mighty</div>
+      <div className="px-4 py-2">Fantastic</div>
+      <div className="px-4 py-2">Enterprise</div>
+      <div className="px-4 py-2">Enterprise Plus</div>
+    </div>
+
+    {features.map((feature, featureIndex) => (
+      <div key={featureIndex} className="mb-8">
+      
+        <div className="bg-white p-4 font-bold text-base w-11/12 mx-auto ">{feature.category}</div>
+        <div className="w-11/12 rounded-lg mx-auto grid grid-cols-1  gap-x-4">
+          {feature.items.map((item, itemIndex) => (
+            <div key={itemIndex} className="group">
+             
+              <div
+                className={`p-4 text-gray-900 ${
+                  itemIndex % 2 === 0 ? "bg-white" : "bg-gray-50"
+                } group-hover:bg-gray-100`}
+              >
+                <a
+                  href="/"
+                  className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
+                >
+                  {item}
+                </a>
+              </div>
+              <div
+                className={`grid grid-cols-2 ${
+                  itemIndex % 2 === 0 ? "bg-white" : "bg-gray-50"
+                } group-hover:bg-gray-100`}
+              >
+                <div className="px-4 pt-2 text-center">
+                  {feature.availability.Mighty && (
+                    <img
+                      alt="tick"
+                      src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                    />
+                  )}
+                </div>
+                <div className="px-4 pt-2 text-center">
+                  {feature.availability.Fantastic && (
+                    <img
+                      alt="tick"
+                      src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                    />
+                  )}
+                </div>
+              </div>
+              <div
+                className={`grid grid-cols-2 ${
+                  itemIndex % 2 === 0 ? "bg-white" : "bg-gray-50"
+                } group-hover:bg-gray-100`}
+              >
+                <div className="px-4 pb-2 text-center">
+                  {feature.availability.Enterprise && (
+                    <img
+                      alt="tick"
+                      src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                    />
+                  )}
+                </div>
+                <div className="px-4 pb-2 text-center">
+                  {feature.availability["Enterprise Plus"] && (
+                    <img
+                      alt="tick"
+                      src="https://assets.www.happyfox.com/v2/images/pricing-tick.svg"
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      </div>
+    ))}
+  </div>
+</div>
+
     </>
   );
 };

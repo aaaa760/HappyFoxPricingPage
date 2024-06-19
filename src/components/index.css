@@ -133,6 +133,7 @@
 
 .pricing-para{
   background: #f9f9f9;
+  color:#212529;
 }
 
 .plan-title {
@@ -151,6 +152,7 @@
 .pricing-para-link {
   color:#323643;
   border-bottom: 0.5px dotted #323643;
+  
 }
 
 .answer-enter {
@@ -181,9 +183,17 @@
 thead th {
   position: -webkit-sticky; 
   position: sticky;
-  top: 61px; 
+ 
   background-color: white; 
 
+}
+
+thead tr:nth-child(1) th {
+  top: 61px; /* Adjust this value to position the first row of headers */
+}
+
+thead tr:nth-child(2) th {
+  top: 100px; /* Adjust this value to position the second row of headers below the first */
 }
 
 .answer {
@@ -192,8 +202,42 @@ thead th {
   transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
 }
 
-.answer.open {
+.answer.open { 
   max-height: 200px; /* You may adjust this value based on your content */
   padding: 10px 0;
 }
 
+.faq-color{
+  background-color: #fafafa;
+}
+
+.helpdesk-color{
+  background-color: #f8f8f8;
+}
+
+.hover-group:hover tr {
+  background-color: #f5f5f5; 
+}
+
+
+.sticky-header {
+  position: sticky;
+  top: 61px;
+  z-index: 10;
+  background-color: white;
+ 
+}
+
+.sticky-header > div:nth-child(1),
+.sticky-header > div:nth-child(2) {
+  top: 61px; 
+}
+
+.sticky-header > div:nth-child(3),
+.sticky-header > div:nth-child(4) {
+  top: 100px;
+}
+
+.navbar-font{
+  font-family: "Inter", sans-serif;
+}

@@ -47,7 +47,7 @@ const ProductTag = ({ image, title, description, link, linkText }) => (
 
 const FAQSection = () => (
   <>
-  <div className="h-[475px] bg-gray-100 w-full mt-12">
+  <div className="h-[475px] faq-color w-full mt-12">
 
   </div>
     <div className="container mx-auto w-11/12 sm:w-4/5 bg-white border  rounded-xl shadow-lg p-6 sm:p-12 sm:px-20 -mt-[414px] ">

@@ -27,7 +27,7 @@ const Main = ({ togglePricingPage }) => {
         <div className="flex flex-row items-start justify-between mx-auto">
           <button
             onClick={() => handleButtonClick("pricing")}
-            className={`p-4 py-4 w-[136px] h-[82px]  sm:py-6 md:py-8 lg:py-9  sm:w-60 md:w-72 lg:w-80  sm:h-[70px] md:h-[90px] lg:h-[85px] text-center shadow-none rounded-t-xl border-none  mr-3 sm:ml-auto cursor-pointer ${getButtonClass(
+            className={`p-4 py-4 w-[136px] h-[82px]  sm:py-6 md:py-8 lg:py-9  sm:w-60 md:w-72 lg:w-80  sm:h-[70px] md:h-[90px] lg:h-[85px] text-center shadow-none rounded-t-xl border-none  mr-6 sm:ml-auto cursor-pointer ${getButtonClass(
               "pricing"
             )}`}
           >

@@ -24,7 +24,7 @@ const NavBar = () => {
     >
       <div className="w-10/12 sm:w-4/5 h-[60px] mx-auto px-4 flex items-center justify-between ">
         <div className="flex items-center">
-          <button className="lg:hidden focus:outline-none">
+          <button className="xl:hidden focus:outline-none">
             <HamBurger className="w-4 h-4" />
           </button>
           <a
@@ -39,10 +39,10 @@ const NavBar = () => {
               height="30"
               className="hf-productnav__logo  w-[20px] h-[20px] sm:w-[30px] sm:h-[30px]"
             />
-            <span className="ml-1 sm:ml-3  text-[18px] sm:text-[25px] font-sans text-black ">helpdesk</span>
+            <span className="ml-1 sm:ml-3  text-[18px] sm:text-[25px] navbar-font font-sans text-black ">helpdesk</span>
           </a>
         </div>
-        <div className="hidden lg:flex flex-row justify-end items-center lg:ml-52  ">
+        <div className="hidden nav:flex flex-row justify-end items-center nav:ml-52  ">
           {["Features", "Solutions", "Pricing", "Resources"].map((item) => (
             <div key={item} className="px-4">
               <div className="py-2 px-4 hover:bg-white hover:cursor-pointer hover:rounded-xl transition-all">

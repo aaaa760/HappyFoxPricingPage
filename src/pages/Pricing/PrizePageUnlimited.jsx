@@ -168,13 +168,13 @@ const PricingPageUnlimited = () => {
           </button>
         </div>
       </div>
-      <div className="container mx-auto w-4/5 p-6 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto sm:w-4/5 p-6 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {pricingOptions[selectedPlan].map((option, index) => (
           <div
             key={index}
             className={`${
               index !== pricingOptions[selectedPlan].length - 1 
-                ? 'border-r border-custom-gray'
+                ? 'border-t sm:border-t-0 sm:border-r  border-custom-gray'
                 : ''
             }`}
           >
@@ -182,7 +182,7 @@ const PricingPageUnlimited = () => {
           </div>
         ))}
       </div>
-      <div className="mt-12 mb-24 mx-auto pricing-para py-3 px-4 text-center font-light text-md rounded-lg max-w-xl text-black">
+      <div className="mt-12 mb-24 mx-auto pricing-para py-3 px-4 text-center font-light text-md rounded-lg w-[285px] sm:w-fit sm:max-w-xl text-black">
         All plans require a minimum of 5 help desk agents. Non-profit and
         educational organizations are eligible for a discount.
       </div>
