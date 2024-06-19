@@ -70,11 +70,11 @@ const PricingComparisonTable = () => {
 
       <div className="container mx-auto">
         <div className="hidden sm:block">
-          <table className="mx-auto w-4/5 text-left border-collapse mt-12">
+          <table className="mx-auto w-10/12 text-left border-collapse mt-12">
             <thead>
               <tr className="text-xl font-medium w-full text-right plan-title">
                 <th className="p-4 border-b-2 border-gray-200"></th>
-                <th className="p-4 border-b-2 border-gray-200">Mighty</th>
+                <th className="p-4 pl-0 border-b-2 border-gray-200">Mighty</th>
                 <th className="p-4 border-b-2 border-gray-200">Fantastic</th>
                 <th className="p-4 border-b-2 border-gray-200">Enterprise</th>
                 <th className="p-4 border-b-2 border-gray-200">

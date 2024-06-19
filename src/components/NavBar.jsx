@@ -22,7 +22,7 @@ const NavBar = () => {
       id="secondDiv"
       className="w-full bg-custom-bg border-t border-custom-border z-50"
     >
-      <div className="w-10/12 sm:w-4/5 h-[60px] mx-auto px-4 flex items-center justify-between ">
+      <div className="w-10/12 sm:w-4/5 h-[60px] mx-auto  flex items-center justify-between ">
         <div className="flex items-center">
           <button className="xl:hidden focus:outline-none">
             <HamBurger className="w-4 h-4" />
@@ -42,7 +42,7 @@ const NavBar = () => {
             <span className="ml-1 sm:ml-3  text-[18px] sm:text-[25px] navbar-font font-sans text-black ">helpdesk</span>
           </a>
         </div>
-        <div className="hidden nav:flex flex-row justify-end items-center nav:ml-52  ">
+        <div className="hidden nav:flex flex-row justify-end items-center nav:ml-5 ">
           {["Features", "Solutions", "Pricing", "Resources"].map((item) => (
             <div key={item} className="px-4">
               <div className="py-2 px-4 hover:bg-white hover:cursor-pointer hover:rounded-xl transition-all">
