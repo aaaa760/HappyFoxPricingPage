@@ -168,7 +168,7 @@ const PricingPageUnlimited = () => {
           </button>
         </div>
       </div>
-      <div className="container mx-auto sm:w-4/5 p-6 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto sm:w-3/5 md:w-4/5 p-6 mt-4 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-y-4 sm:gap-0">
         {pricingOptions[selectedPlan].map((option, index) => (
           <div
             key={index}

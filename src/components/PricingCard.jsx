@@ -8,10 +8,10 @@ const PricingCard = ({ title, price, features, isPopular, savings }) => {
       <div className='border-b border-custom-gray pb-5  mb-10'>
         {isPopular && <span className="text-red-500 text-sm px-8">Most Popular</span>}
         <h2 className="text-2xl from-neutral-200 px-8 pb-6">{title}</h2>
-        <div className="flex items-end px-6  ">
-          <span className="font-size">$</span>
-          <span className="text-5xl font-medium ">{price}</span>
-          <span className="text-xs mb-1 ml-1 text-gray-500"> Per agent/mo</span>
+        <div className="flex items-end px-6">
+          <span className="font-size dollor text-[#212529] mb-3 mr-1 ml-2">$</span>
+          <span className="text-5xl font-medium text-[#212529] card">{price}</span>
+          <span className="text-xs ml-1 mb-4 text-[#333741]"> Per agent/mo</span>
         </div>
         {savings && <div className="text-green-600 text-md  px-7 pt-4">{savings}</div>}
        
@@ -19,7 +19,7 @@ const PricingCard = ({ title, price, features, isPopular, savings }) => {
       <div className="flex-grow pl-5 pt-7 pr-10 pb-9">
         <ul>
           {features.map((feature, index) => (
-            <li key={index} className="design mt-2">
+            <li key={index} className="design mt-2 ">
               {feature}
             </li>
           ))}

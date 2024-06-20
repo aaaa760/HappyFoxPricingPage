@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./index.css";
-import { ReactComponent as DownArrow } from "../assets/svg/DownArrow.svg";
-import { ReactComponent as UpArrow } from "../assets/svg/UpArrow.svg";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +11,16 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center py-3 text-left"
       >
-        <span className="text-md font-md px-3 pt-3 pb-3">{question}</span>
+        <span className="text-medium font-medium leading-[19px] px-3 pt-3 pb-3">{question}</span>
         {isOpen ? (
-          <UpArrow className="h-3 w-2" />
+          
+          <img src="https://assets.www.happyfox.com/v2/images/down-arrow.svg" className="arrow-rotate" alt="uparrow"/>
         ) : (
-          <DownArrow className="h-3 w-2" />
+          <img src="https://assets.www.happyfox.com/v2/images/down-arrow.svg" alt="uparrow"/>
         )}
       </button>
       <div className={`answer ${isOpen ? "open" : ""}`}>
-        <p className="text-gray-700 pl-4 pb-4">{answer}</p>
+        <p className="text-[#6d717e] font-light pl-4 pb-4">{answer}</p>
       </div>
     </div>
   );
@@ -30,11 +29,11 @@ const FAQItem = ({ question, answer }) => {
 
 
 const ProductTag = ({ image, title, description, link, linkText }) => (
-  <div className="flex flex-col items-center text-center p-8 py-8 border border-white  rounded-xl  hover:border hover:border-gray-300 hover:shadow-md">
-    <img src={image} alt="icon" className="w-20 h-20 mb-2" />
-    <h4 className="text-xl font-semibold mb-2">{title}</h4>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <a href={link} className="text-black font-md flex items-center">
+  <div className="flex flex-col items-center text-center p-8 py-8  border border-white  rounded-xl  hover:border hover:border-gray-300 hover:shadow-md">
+    <img src={image} alt="icon" className="w-24 h-24 mb-6" />
+    <h4 className="text-xl font-medium leading-[29px] text-[24px] mb-2">{title}</h4>
+    <p className="text-[#4b5563] font-light mb-4">{description}</p>
+    <a href={link} className="text-black font-medium flex items-center">
       {linkText}{" "}
       <img
         src="https://assets.www.happyfox.com/v2/images/right-arrow-small.svg"
@@ -50,9 +49,9 @@ const FAQSection = () => (
   <div className="h-[475px] faq-color w-full mt-12">
 
   </div>
-    <div className="container mx-auto w-11/12 sm:w-4/5 bg-white border  rounded-xl shadow-lg p-6 sm:p-12 sm:px-20 -mt-[414px] ">
+    <div className="container mx-auto w-[80%] px-12 sm:w-4/5 bg-white border  rounded-xl shadow-lg p-6 sm:p-12 sm:px-20 -mt-[414px] ">
       <div className="bg-white flex flex-col">
-        <h2 className="text-4xl text-gray-700 font-semibold text-center mb-16 mt-6">
+        <h2 className="text-[32px] leading-[38px] text-[#323643] font-medium text-center mb-16 mt-6">
           Frequently Asked Questions
         </h2>
         <div>
@@ -88,7 +87,7 @@ const FAQSection = () => (
       <h2 className="text-4xl font-semibold text-center mb-20">
         More from HappyFox
       </h2>
-      <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 mb-20 ">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 mb-28 ">
         <ProductTag
           image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
           title="Live Chat"
@@ -97,28 +96,28 @@ const FAQSection = () => (
           linkText="Start free trial"
         />
         <ProductTag
-          image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
+          image="https://assets.www.happyfox.com/v2/images/pricing-cb.svg"
           title="Chatbot"
           description="Engage and reach your customers 24x7 with ready-to-go chatbots."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
-          image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
+          image="	https://assets.www.happyfox.com/v2/images/pricing-cb.svg"
           title="Assist AI"
           description="Provide IT support directly from Slack and Microsoft Teams."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
-          image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
+          image="https://assets.www.happyfox.com/v2/images/pricing-bi.svg"
           title="Business Intelligence"
           description="Turn insight into advantage with cross-functional reports & dashboards."
           link="https://happyfoxchat.com/v2/signup/"
           linkText="Get a demo"
         />
         <ProductTag
-          image="https://assets.www.happyfox.com/v2/images/pricing-lc.svg"
+          image="	https://assets.www.happyfox.com/v2/images/pricing-wa.svg"
           title="Workflow Automation"
           description="Reduce the grunt work with end-to-end process automation."
           link="https://happyfoxchat.com/v2/signup/"

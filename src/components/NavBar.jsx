@@ -42,7 +42,7 @@ const NavBar = () => {
             <span className="ml-1 sm:ml-3  text-[18px] sm:text-[25px] navbar-font font-sans text-black ">helpdesk</span>
           </a>
         </div>
-        <div className="hidden nav:flex flex-row justify-end items-center nav:ml-5 ">
+        <div className="hidden font-normal text-[#181c20] nav:flex flex-row justify-end items-center  nav:ml-5 ">
           {["Features", "Solutions", "Pricing", "Resources"].map((item) => (
             <div key={item} className="px-4">
               <div className="py-2 px-4 hover:bg-white hover:cursor-pointer hover:rounded-xl transition-all">
@@ -60,7 +60,7 @@ const NavBar = () => {
         
         </div>
 
-        <div className="flex justify-end items-center w-[94px] h-[60px]">
+        <div className="flex justify-end items-center w-[100px] h-[60px]">
           <button className="bg-[#ff3a3a] text-white font-medium text-[14px] py-1 px-2 rounded shadow-md  hover:translate-y-1 transition ease-out duration-300">
             Get a Demo
           </button>

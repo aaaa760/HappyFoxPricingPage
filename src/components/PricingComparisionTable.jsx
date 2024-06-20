@@ -72,12 +72,12 @@ const PricingComparisonTable = () => {
         <div className="hidden sm:block">
           <table className="mx-auto w-10/12 text-left border-collapse mt-12">
             <thead>
-              <tr className="text-xl font-medium w-full text-right plan-title">
-                <th className="p-4 border-b-2 border-gray-200"></th>
-                <th className="p-4 pl-0 border-b-2 border-gray-200">Mighty</th>
-                <th className="p-4 border-b-2 border-gray-200">Fantastic</th>
-                <th className="p-4 border-b-2 border-gray-200">Enterprise</th>
-                <th className="p-4 border-b-2 border-gray-200">
+              <tr className="text-[20px] font-medium  w-full text-right ">
+                <th className="p-4 border-b-2 border-gray-200 font-medium text-[#323643] "></th>
+                <th className="p-4 pl-0 border-b-2 border-gray-200 font-medium text-[#323643] ">Mighty</th>
+                <th className="p-4 border-b-2 border-gray-200 font-medium text-[#323643] ">Fantastic</th>
+                <th className="p-4 border-b-2 border-gray-200 font-medium text-[#323643] ">Enterprise</th>
+                <th className="p-4 border-b-2 border-gray-200 font-medium text-[#323643] ">
                   Enterprise Plus
                 </th>
               </tr>
@@ -88,7 +88,7 @@ const PricingComparisonTable = () => {
                   <tr>
                     <td
                       colSpan="5"
-                      className="bg-white p-4 font-bold text-base"
+                      className="bg-white p-4 font-medium text-base"
                     >
                       {feature.category}
                     </td>
@@ -102,10 +102,10 @@ const PricingComparisonTable = () => {
                           : "bg-gray-50"
                       } flex flex-col sm:table-row`}
                     >
-                      <td className="p-4 text-gray-900">
+                      <td className="p-4 text-gray-900 font-medium">
                         <a
                           href="/"
-                          className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
+                          className="border-b border-gray-900   border-dotted border-opacity-50 text-gray-600 font-light hover:text-[#f16631] hover:border-[#f16631]"
                         >
                           {item}
                         </a>
@@ -157,17 +157,17 @@ const PricingComparisonTable = () => {
       <div className="container mx-auto">
   <div className="block md:hidden mt-12">
     
-    <div className="w-full mx-auto grid grid-cols-2 text-left plan-title sticky-header shadow-lg ">
-      <div className="px-4 py-2">Mighty</div>
-      <div className="px-4 py-2">Fantastic</div>
-      <div className="px-4 py-2">Enterprise</div>
-      <div className="px-4 py-2">Enterprise Plus</div>
+    <div className="w-full mx-auto grid grid-cols-2 text-left plan-title sticky-header shadow-lg text-[20px] font-medium ">
+      <div className="px-4 py-2 font-medium text-[#323643]">Mighty</div>
+      <div className="px-4 py-2 font-medium text-[#323643]">Fantastic</div>
+      <div className="px-4 py-2 font-medium text-[#323643]">Enterprise</div>
+      <div className="px-4 py-2 font-medium text-[#323643]">Enterprise Plus</div>
     </div>
 
     {features.map((feature, featureIndex) => (
       <div key={featureIndex} className="mb-8">
       
-        <div className="bg-white p-4 font-bold text-base w-11/12 mx-auto ">{feature.category}</div>
+        <div className="bg-white p-4 font-medium text-base w-11/12 mx-auto ">{feature.category}</div>
         <div className="w-11/12 rounded-lg mx-auto grid grid-cols-1  gap-x-4">
           {feature.items.map((item, itemIndex) => (
             <div key={itemIndex} className="group">
@@ -179,7 +179,7 @@ const PricingComparisonTable = () => {
               >
                 <a
                   href="/"
-                  className="border-b border-gray-900 border-dotted border-opacity-50 text-gray-600 hover:text-orange-400 hover:border-orange-400"
+                  className="border-b border-gray-900   border-dotted border-opacity-50 text-gray-600 font-light hover:text-[#f16631] hover:border-[#f16631]"
                 >
                   {item}
                 </a>

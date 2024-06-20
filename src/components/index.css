@@ -1,3 +1,62 @@
+
+
+.header {
+  background-color: white;
+  padding-top: 0.625rem;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83.333333%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .header-container {
+    width: 80%;
+    height: 3rem;
+  }
+}
+
+.logo {
+  height: 100%;
+  margin-right: 1.5rem;
+}
+
+.products {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .products {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.products img {
+  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+}
+
+.login-text {
+  font-size: 0.875rem;
+  color: #718096;
+  cursor: pointer;
+}
+
+.login-text:hover {
+  color: black;
+}
+
+
 .products
 {
   background: #ffecec; 
@@ -12,6 +71,9 @@
   width: 137px; 
   height:46px; 
 }
+
+
+
 
 .button-price-selected {
   background: #fff;
@@ -100,6 +162,12 @@
   width: 25%;
 }
 
+.pricing-font {
+  font-family: "Inter" ,sans-serif ;
+  line-height: 48px;
+  font-size: 40px;
+}
+
 .the-get-demo {
   width: 100%;
   display: inline-block;
@@ -129,7 +197,10 @@
   margin-bottom: 15px;
   list-style: circle;
   margin-left: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
+
 
 .pricing-para{
   background: #f9f9f9;
@@ -240,4 +311,18 @@ thead tr:nth-child(2) th {
 
 .navbar-font{
   font-family: "Inter", sans-serif;
+}
+
+.card{
+  line-height: 72px;
+}
+
+.dollor{
+  line-height: 36px;
+  font-size: 24px;
+
+}
+
+.arrow-rotate{
+  transform: rotate(180deg);
 }

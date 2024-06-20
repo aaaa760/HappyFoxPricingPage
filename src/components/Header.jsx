@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-white pt-2.5 w-full">
       <div
-        className="container mx-auto w-10/12 sm:w-4/5 px-4 flex justify-between items-center h-12"
+        className="container mx-auto w-[94%] sm:w-4/5 px-4 flex justify-between items-center h-9 sm:h-12"
         
       >
         <div className="flex items-center">
@@ -22,7 +22,7 @@ const Header = () => {
             />
           </span>
         </div>
-        <p className="text-sm text-gray-600 hover:text-black cursor-pointer">
+        <p className="text-sm text-[#646f79] hover:text-black cursor-pointer">
           Log In
         </p>
       </div>
